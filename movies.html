@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="movie__search">
+        <a href="/index.html">
+            <button>back</button>
+        </a>
+        <div class="movie__search--container">
+            <label class="movie__search-label">
+                Search by ID
+            </label>
+            <input type="text" placeholder="1" onchange="onSearchChange(event)">
+        </div>
+    </div>
+    <div class="movie__list">
+        <div class="movie">
+            <div class="movie__title">
+                Movie Title
+            </div>
+            <div class="movie__year">
+                2001
+            </div>
+        </div>
+    </div>
+</body>
+<script src="movies.js"></script>
+</html>
