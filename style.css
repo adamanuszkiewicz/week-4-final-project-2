@@ -21,10 +21,12 @@ img {
     width: 100%;
     max-width: 250px;
 }
+
+
 input {
     max-width: 200px;
-    border-radius: 4px;
-    border: none;
+    border-radius: 20px;
+    font-weight: bold;
 }
 
 p {
@@ -49,6 +51,7 @@ li {
 }
 
 h1 {
+    border-radius: 2px;
     font-size: 30px;
     color: yellow;
 }
@@ -82,8 +85,11 @@ button:active {
 
 
 
-.logo {
-    width: 1200px;
+.faf__logo {
+    max-width: 2000px;
+    width: 2000px;
+    padding-top: 24px;
+    margin-left: 250px;
 }
 
 .nav__container {
@@ -124,10 +130,10 @@ button:active {
 }
 
 .btm__menu {
-    background-color: transparent;
+    background-color: black;
     font-size: 40px;
     border: none;
-    color: green;
+    color: yellow;
     display: none;
 }
 
@@ -204,6 +210,7 @@ Landing
     background-color: rgb(44, 57, 107);
 }
 
+
 .search__wrapper {
     display: flex;
     justify-content: flex-end;
@@ -211,6 +218,11 @@ Landing
 }
 
 .fast__movie {
+    font-size: 30px;
+    color: grey;
+    border: none;
+    background-color: white;
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -228,7 +240,6 @@ Landing
 }
 
 .movie__card {
-
 }
 
 
@@ -240,7 +251,6 @@ Landing
 }
 
 
-
 @keyframes rotate {
     0% {
         transform: rotate(0);
@@ -250,3 +260,4 @@ Landing
         transform: rotate(360deg);
     }
 }
+

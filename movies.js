@@ -64,6 +64,7 @@ function yearsHTML(year) {
         yearHTML += `${movies.Year}`;
     }
     if (!Number.isInteger(year)) {
-        yearHTML += 
+        yearHTML +=  `${movies.Year}`
     }
+    return yearHTML
 }
