@@ -15,13 +15,29 @@
                     <img class="logo" src="Site-logo.webp" alt="">
                 </div>
                 <ul class="nav__links">
-                    <li><a href="home" class="link">Home</a></li>
-                    <li><a href="movies" class="link">Movies</a></li>
-                    <li><a href="contact" class="btn-contact">Contact</a></li>
+                    <li><a href="#home" class="nav__link">Home</a></li>
+                    <li><a href="#contact" class="nav__link">Contact</a></li>
+                    <li><a href="#movies" class="nav__link nav__linl-primary">Movies</a></li>
                 </ul>
-                <div class="content__wrapper">
-                    <h1>Find your favorite FAST Movie!</h1>
-                      <input type="text" placeholder="FAST Search">
+                <button class="btn__menu" onclick="openMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul class="menu__links">
+                        <li class="menu__list">
+                            <a href="#home" class="menu__link" onclick="closeMenu()">Home</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="#contact" class="menu__link" onclick="closeMenu()">Contact</a>
+                        </li>
+                        <li class="menu__list">
+                            <a href="menu__link no-cursor" class="menu__link" onclick="closeMenu()">Movies</a>
+                        </li>
+
+                    </ul>
                 </div>
                 <div class="overlay">
                 </div>
@@ -29,26 +45,25 @@
         </nav>    
     </section>    
     <section id="search">
-        <div class="content__wrapper">
-            <h1 class="search__info">FAST Movies</h1>
+        <div class="search__wrapper">
+            <h1 class="fast__movie">Find your favorite FAST Movie!</h1>
+            <input type="text" placeholder=" FAST Search">
         </div>
+        <h2 class="search__info">FAST Movies</h2>
         <div class="movie__container">
             <div class="movie__list">
                 <div class="movie">
                     <div class="movie__card">
                         <div class="movie__card--container">
-                            <figure class="movie__img--wrapper">
-                                <img class="movie__img" src="the-fast-and-furious-1.jpg.jpg" alt="">
-                            </figure>
                             <div class="movie__description">
                                 <div class="movie__title">
-                                    <h3>Movie Title</h4>
+                                    <h3>${movie.Title}</h4>
                                 </div>
                                 <div class="movie__year">
-                                    <p>2001</p>
+                                    <p>${movie.Year}</p>
                                 </div>
                                 <div class="movie__poster">
-                                    <p href="https://website.website"></p>
+                                    <img src=${movie.Poster}>
                                 </div>
                             </div>    
                         </div>

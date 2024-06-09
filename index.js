@@ -3,7 +3,7 @@ const movieListEl = document.querySelector('.movie__list');
 async function main() {
     const movies = await fetch("https://omdbapi.com/?apikey=f1babf83&s=fast");
     const moviesData = await movies.json();
-    movieListEl.innerHTML = moviesData.mao((movie) => movieHTML(movie)).join("");
+    movieListEl.innerHTML = moviesData.Search.map((movie) => movieHTML(movie)).join("");
 }
 
 main();
@@ -21,13 +21,13 @@ function movieHTML(movie) {
             <div class="movie__card--container">
                 <div class="movie__description">
                     <div class="movie__title">
-                        <h3>${movie.title}</h4>
+                        <h3>${movie.Title}</h4>
                     </div>
                     <div class="movie__year">
-                        <p>${movie.year}</p>
+                        <p>${movie.Year}</p>
                     </div>
                     <div class="movie__poster">
-                        <p href="https://${movie.poster}"></p>
+                        <img src=${movie.Poster}>
                     </div>
                 </div>    
             </div>
@@ -35,3 +35,11 @@ function movieHTML(movie) {
         
 }
 
+
+function openMenu() {
+    document.body.classList += "menu--open"
+}
+
+function closeMenu() {
+    document.body.classList.remove('menu--open')
+}
