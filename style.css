@@ -5,12 +5,21 @@
     font-family: sans-serif;
 }
 
+
 html {
+    height: 100%;
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: rgba(74, 111, 148, 0.8);
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: rgba(71, 86, 101, 0.8);
+}
+
+section {
+    margin-top: 48px;
 }
 
 nav {
@@ -22,11 +31,16 @@ img {
     max-width: 250px;
 }
 
-
 input {
-    max-width: 200px;
+    position: relative;
+    margin-right: 24px;
+    max-width: 400px;
+    width: 300px;
     border-radius: 20px;
+    border-style: none;
     font-weight: bold;
+    height: 24px;
+    margin-top: 20px;
 }
 
 p {
@@ -83,23 +97,21 @@ button:active {
     border: none;
 }
 
-
-
 .faf__logo {
-    max-width: 2000px;
-    width: 2000px;
+    position: relative;
+    max-width: 1200px;
+    width: 400px;
     padding-top: 24px;
-    margin-left: 250px;
 }
 
 .nav__container {
+    background-color: black;
     width: 100%;
-    max-width: 1200px;
-    padding: 0 24px;
+    max-width: 2200px;
+    padding: 48px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
 }
 
 .nav__link {
@@ -130,7 +142,6 @@ button:active {
 }
 
 .btm__menu {
-    background-color: black;
     font-size: 40px;
     border: none;
     color: yellow;
@@ -157,6 +168,7 @@ button:active {
 .menu--open {
     max-height: 100vh;
     overflow: hidden;
+    border-radius: 20px;
 }
 
 .menu--open .menu__backdrop {
@@ -177,8 +189,16 @@ button:active {
 
 
 .menu__link {
-    color: white;
+    color: yellow;
     font-size: 40px;
+}
+
+.btn__menu {
+    color: yellow;
+    border-radius: 8px;
+    font-size: 24px;
+    border: none;
+    background: none;
 }
 
 .btn__menu--close {
@@ -186,7 +206,6 @@ button:active {
     top: 10px;
     right: 20px;
     padding: 8px;
-    color: white;
 }
 
 .btn-contact {
@@ -206,29 +225,33 @@ Landing
     padding:0 12px 20px 12px;
     margin-bottom: 24px;
     color: yellow;
-    border: solid black;
-    background-color: rgb(44, 57, 107);
+    border: solid silver;
+    background-color: #242424;
 }
 
 
 .search__wrapper {
     display: flex;
-    justify-content: flex-end;
-    margin: 0 24px 0 24px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 24px 24px 24px;
 }
 
 .fast__movie {
+    position: relative;
     font-size: 30px;
-    color: grey;
+    color: yellow;
     border: none;
-    background-color: white;
-    overflow: hidden;
+    border-radius: 20px;
+    margin-top: 52px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 12px;
 }
 
 .movie__container {
+    max-width: 350px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -239,25 +262,15 @@ Landing
     padding-bottom: 12px;
 }
 
-.movie__card {
-}
-
-
 .search__info {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     max-width: 100%;
     margin-top: 18px;
-    margin-left: 32px;
     padding: 16px;
+    margin-left: 24px;
 }
 
 
-@keyframes rotate {
-    0% {
-        transform: rotate(0);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
 
