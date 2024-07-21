@@ -1,7 +1,9 @@
 const movieListEl = document.querySelector('.movie__list');
-
+const APIKEY = "f1babf83"
+const searchInput = "input"
 async function main() {
-    const movies = await fetch("https://omdbapi.com/?apikey=f1babf83&s=fast");
+    const movies = await fetch(`https://omdbapi.com/?s=${searchInput.value}&apikey=${APIKEY}
+    `);
     const moviesData = await movies.json();
     movieListEl.innerHTML = moviesData.Search.map((movie) => movieHTML(movie)).join("");
 }

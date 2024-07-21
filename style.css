@@ -43,6 +43,18 @@ input {
     margin-top: 20px;
 }
 
+.search__btn {
+    position: relative;
+    margin-right: 24px;
+    max-width: 400px;
+    width: 100px;
+    border-radius: 20px;
+    border-style: none;
+    font-weight: bold;
+    height: 24px;
+    margin-top: 20px;
+}
+
 p {
     line-height: 1.5;
     margin-bottom: 8px;
