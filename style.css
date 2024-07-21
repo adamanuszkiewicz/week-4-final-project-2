@@ -34,8 +34,7 @@ img {
 input {
     position: relative;
     margin-right: 24px;
-    max-width: 400px;
-    width: 300px;
+    width: 200px;
     border-radius: 20px;
     border-style: none;
     font-weight: bold;
@@ -43,11 +42,10 @@ input {
     margin-top: 20px;
 }
 
-.search__btn {
+#searchButton {
     position: relative;
     margin-right: 24px;
-    max-width: 400px;
-    width: 100px;
+    width: 150px;
     border-radius: 20px;
     border-style: none;
     font-weight: bold;
@@ -107,13 +105,17 @@ button:active {
     font-size: 20px;
     border-radius: 4px;
     border: none;
+    
 }
 
-.faf__logo {
+.page__title {
+    color: red;
+    font-size: 64px;
     position: relative;
     max-width: 1200px;
     width: 400px;
-    padding-top: 24px;
+    height: 92px;
+    
 }
 
 .nav__container {

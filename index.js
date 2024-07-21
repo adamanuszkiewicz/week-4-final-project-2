@@ -1,15 +1,28 @@
 const movieListEl = document.querySelector('.movie__list');
 const APIKEY = "f1babf83"
-const searchInput = "input"
+const searchInput = document.getElementById("searchInput")
+const searchButton = document.getElementById("searchButton")
+
 async function main() {
     const movies = await fetch(`https://omdbapi.com/?s=${searchInput.value}&apikey=${APIKEY}
     `);
     const moviesData = await movies.json();
     movieListEl.innerHTML = moviesData.Search.map((movie) => movieHTML(movie)).join("");
+    
 }
 
 main();
 
+searchButton.addEventListener('click', function() {
+    const searchTerm = searchInput.value;
+    console.log(`Searching for "${searchTerm}`)
+});
+
+searchInput.addEventListener('keyup', function(event) {
+    if (event,keyCode === 13) {
+        searchButton.click();
+    }
+})
 
 function showMovie(movie) {
     localStorage.setItem("movie", movie);
@@ -17,13 +30,12 @@ function showMovie(movie) {
 }
 
 
-
 function movieHTML(movie) {
             return `<div class="movie__card">
             <div class="movie__card--container">
                 <div class="movie__description">
                     <div class="movie__title">
-                        <h3>${movie.Title}</h4>
+                        <h3>${movie.Title}</h3>
                     </div>
                     <div class="movie__year">
                         <p>${movie.Year}</p>
