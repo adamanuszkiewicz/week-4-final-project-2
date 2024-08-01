@@ -2,32 +2,35 @@ const movieListEl = document.querySelector('.movie__list');
 const APIKEY = "f1babf83"
 const searchInput = document.getElementById("searchInput")
 const searchButton = document.getElementById("searchButton")
-
 async function main() {
     const movies = await fetch(`https://omdbapi.com/?s=${searchInput.value}&apikey=${APIKEY}
     `);
     const moviesData = await movies.json();
     movieListEl.innerHTML = moviesData.Search.map((movie) => movieHTML(movie)).join("");
     
-}
+    async function fetchData() {
+          try {
+            const response = await fetch(`https://omdbapi.com/?s=${searchInput.value}&apikey=${APIKEY}
+    `);
+            if (!response.ok) throw new Error("HTTP error " + response.status);
+            const data = await response.json();
+            console.log(data);
+          } catch (error) {
+            console.error("Fetch error:", error);
+          }
+        }
+};
 
-main();
 
-searchButton.addEventListener('click', function() {
-    const searchTerm = searchInput.value;
-    console.log(`Searching for "${searchTerm}`)
-});
+
+searchButton.addEventListener('click', main)
 
 searchInput.addEventListener('keyup', function(event) {
-    if (event,keyCode === 13) {
+    if (event.key === "Enter") {
         searchButton.click();
     }
 })
 
-function showMovie(movie) {
-    localStorage.setItem("movie", movie);
-    window.location.href = `${window.location.origin}/movie.html`
-}
 
 
 function movieHTML(movie) {
@@ -48,7 +51,6 @@ function movieHTML(movie) {
         </div>`
         
 }
-
 
 function openMenu() {
     document.body.classList += "menu--open"
