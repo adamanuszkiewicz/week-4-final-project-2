@@ -23,6 +23,7 @@ async function main() {
 
 
 
+
 searchButton.addEventListener('click', main)
 
 searchInput.addEventListener('keyup', function(event) {
@@ -31,7 +32,8 @@ searchInput.addEventListener('keyup', function(event) {
     }
 })
 
-
+// </div>
+//                     <div class="movie__year"></div>
 
 function movieHTML(movie) {
             return `<div class="movie__card">
@@ -39,8 +41,7 @@ function movieHTML(movie) {
                 <div class="movie__description">
                     <div class="movie__title">
                         <h3>${movie.Title}</h3>
-                    </div>
-                    <div class="movie__year">
+                    
                         <p>${movie.Year}</p>
                     </div>
                     <div class="movie__poster">
